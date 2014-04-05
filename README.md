@@ -1,8 +1,8 @@
 Weighbridge
 ===========
-This custom module for OpenERP 6.0 allows tracking of vehicle and proper distribution of workload in delivery warehouses.
+This customized module for OpenERP 6.0 allows tracking of vehicle and proper distribution of workload in delivery warehouses.
 <br><br>
-This module has the following features:
+The module has the following features:
 <br>
 1. Record all vehicle passing through the weighbridge.<br>
 2. Store vehicle details such as registration number, gross weight, timestamp.<br>
