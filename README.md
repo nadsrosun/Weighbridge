@@ -8,7 +8,7 @@ This module has the following features:
 2. Store vehicle details such as registration number, gross weight, timestamp.<br>
 3. Track vehicles during the entire sales and distribution process.<br>
 4. Compare maximum carrying capacity of vehicle against maximum products weight from sales order.<br>
-5. Generate error message if there is any conflict between sales order and delivery vehicle.<br>
+5. Generate error message if there is any conflict between a sales order and its respective delivery vehicle.<br>
 
 
 <h2>Author</h2>
