@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<terp>
+	<data>
+		<record model="ir.ui.view" id="weighbridge_search">
+			<field name="name">weighbridge.search</field>
+			<field name="model">weighbridge.info</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="Weighbridge Information System">
+					<field name="vehicle_no" string="Vehicle No"/>
+					<field name="purpose" string="Purpose"/>
+					<field name="gross_weight" string="Gross Weight"/>
+					<field name="weight_in" string="Weight IN"/>
+					<field name="time_in" string="Time IN"/>
+					<field name="weight_out" string="Weight OUT"/>
+					<field name="time_out" string="Time OUT"/>
+				</search>
+			</field>
+		</record>
+		<record id='weighbridge_info_tree' model='ir.ui.view'>
+			<field name="name">weighbridge.result.tree</field>
+			<field name="model">weighbridge.info</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Weighbridge_result">
+					<field name="vehicle_no"/>
+					<field name="purpose"/>
+					<field name="gross_weight"/>
+					<field name="weight_in"/>
+					<field name="time_in"/>
+					<field name="weight_out"/>
+					<field name="time_out"/>
+				</tree>
+			</field>
+		</record>
+		<record id='weighbridge_info_form' model='ir.ui.view'>
+			<field name="name">weighbridge.result.form</field>
+			<field name="model">weighbridge.info</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Weighbridge result">
+					<group col="2" colspan="4">
+						<field name="vehicle_no" />
+						<field name="purpose" />
+						<field name="gross_weight" />
+					</group>
+					<separator colspan="4"/>
+					<group col="2" colspan="4" string="Direction IN">
+						<field name="weight_in" colspan="2"/>
+						<field name="time_in" colspan="2"/>
+					</group>
+					<separator colspan="4"/>
+					<group col="2" colspan="4" string="Direction OUT">
+						<field name="weight_out" colspan="2"/>
+						<field name="time_out" colspan="2"/>
+					</group>
+				</form>
+			</field>
+		</record>
+		<record id='action_weighbridge_info' model='ir.actions.act_window'>
+			<field name='name'>Weighbridge Information</field>
+			<field name='res_model'>weighbridge.info</field>
+			<field name='view_model'>form</field>
+			<field name='view_mode'>tree,form</field>
+		</record>
+		
+		<menuitem id="weighbridge_parent" name="Weighbridge"/>
+		<menuitem id="menu_weighbridge_parent" name="Weighbridge Management" parent="weighbridge_parent"/>
+		<menuitem action="action_weighbridge_info" id="menu_weighbridge_info" parent="menu_weighbridge_parent" string="Result"/>
+	</data>
+</terp>
+					
+			
